@@ -21,12 +21,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="News App"
-                android:textColor="@color/yellow"
-                android:textAlignment="center"
-                android:padding="4dp"
                 android:layout_marginEnd="15dp"
-                />
+                android:padding="4dp"
+                android:text="News App"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp" />
 
 
         </RelativeLayout>
@@ -34,14 +34,13 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCategories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idRVCategories"
-        android:orientation="horizontal"
         android:layout_below="@id/idToolbar"
-        tools:listitem="@layout/categories_rv_item"
+        android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
+        tools:listitem="@layout/categories_rv_item" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVNews"
@@ -50,9 +49,8 @@
         android:layout_below="@id/idRVCategories"
         android:layout_marginTop="5dp"
         android:orientation="vertical"
-        tools:listitem="@layout/news_rv_item"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
+        tools:listitem="@layout/news_rv_item" />
 
     <ProgressBar
         android:layout_width="wrap_content"
